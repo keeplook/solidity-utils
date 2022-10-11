@@ -55,7 +55,7 @@ contract FactoryAssembly {
         create new contract with code at memory p to p + n
         and send v wei
         and return the new address
-        where new address = first 20 bytes of keccak256(0xff + address(this) + s + keccak256(mem[p¡­(p+n)))
+        where new address = first 20 bytes of keccak256(0xff + address(this) + s + keccak256(mem[pâ€¦(p+n)))
               s = big-endian 256-bit value
         */
         for(uint256 i=1;i<=_salt;i++){
@@ -68,7 +68,7 @@ contract FactoryAssembly {
                 i // Salt from function arguments
             )
 
-            // if iszero(extcodesize(addr)) {//¼ì²éÊÇ·ñ²¿Êð³É¹¦ ºÏÔ¼Ïú»ÙÒ²»á±íÊ¾²¿Êð²»³É¹¦
+            // if iszero(extcodesize(addr)) {//æ£€æŸ¥æ˜¯å¦éƒ¨ç½²æˆåŠŸ åˆçº¦é”€æ¯ä¹Ÿä¼šè¡¨ç¤ºéƒ¨ç½²ä¸æˆåŠŸ
             //     revert(0, 0)
             // }
         }
